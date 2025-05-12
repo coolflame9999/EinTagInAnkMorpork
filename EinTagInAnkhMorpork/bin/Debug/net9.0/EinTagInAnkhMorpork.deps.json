@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "EinTagInAnkhMorpork/1.0.0": {
+        "runtime": {
+          "EinTagInAnkhMorpork.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EinTagInAnkhMorpork/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

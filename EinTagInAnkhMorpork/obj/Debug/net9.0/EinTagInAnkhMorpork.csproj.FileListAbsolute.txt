@@ -1,0 +1,15 @@
+C:\Users\micha\OneDrive\Desktop\LuGProbeProjekt\StartProjekt\EinTagInAnkhMorpork\bin\Debug\net9.0\EinTagInAnkhMorpork.exe
+C:\Users\micha\OneDrive\Desktop\LuGProbeProjekt\StartProjekt\EinTagInAnkhMorpork\bin\Debug\net9.0\EinTagInAnkhMorpork.deps.json
+C:\Users\micha\OneDrive\Desktop\LuGProbeProjekt\StartProjekt\EinTagInAnkhMorpork\bin\Debug\net9.0\EinTagInAnkhMorpork.runtimeconfig.json
+C:\Users\micha\OneDrive\Desktop\LuGProbeProjekt\StartProjekt\EinTagInAnkhMorpork\bin\Debug\net9.0\EinTagInAnkhMorpork.dll
+C:\Users\micha\OneDrive\Desktop\LuGProbeProjekt\StartProjekt\EinTagInAnkhMorpork\bin\Debug\net9.0\EinTagInAnkhMorpork.pdb
+C:\Users\micha\OneDrive\Desktop\LuGProbeProjekt\StartProjekt\EinTagInAnkhMorpork\obj\Debug\net9.0\EinTagInAnkhMorpork.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\micha\OneDrive\Desktop\LuGProbeProjekt\StartProjekt\EinTagInAnkhMorpork\obj\Debug\net9.0\EinTagInAnkhMorpork.AssemblyInfoInputs.cache
+C:\Users\micha\OneDrive\Desktop\LuGProbeProjekt\StartProjekt\EinTagInAnkhMorpork\obj\Debug\net9.0\EinTagInAnkhMorpork.AssemblyInfo.cs
+C:\Users\micha\OneDrive\Desktop\LuGProbeProjekt\StartProjekt\EinTagInAnkhMorpork\obj\Debug\net9.0\EinTagInAnkhMorpork.csproj.CoreCompileInputs.cache
+C:\Users\micha\OneDrive\Desktop\LuGProbeProjekt\StartProjekt\EinTagInAnkhMorpork\obj\Debug\net9.0\EinTagInAnkhMorpork.sourcelink.json
+C:\Users\micha\OneDrive\Desktop\LuGProbeProjekt\StartProjekt\EinTagInAnkhMorpork\obj\Debug\net9.0\EinTagInAnkhMorpork.dll
+C:\Users\micha\OneDrive\Desktop\LuGProbeProjekt\StartProjekt\EinTagInAnkhMorpork\obj\Debug\net9.0\refint\EinTagInAnkhMorpork.dll
+C:\Users\micha\OneDrive\Desktop\LuGProbeProjekt\StartProjekt\EinTagInAnkhMorpork\obj\Debug\net9.0\EinTagInAnkhMorpork.pdb
+C:\Users\micha\OneDrive\Desktop\LuGProbeProjekt\StartProjekt\EinTagInAnkhMorpork\obj\Debug\net9.0\EinTagInAnkhMorpork.genruntimeconfig.cache
+C:\Users\micha\OneDrive\Desktop\LuGProbeProjekt\StartProjekt\EinTagInAnkhMorpork\obj\Debug\net9.0\ref\EinTagInAnkhMorpork.dll
