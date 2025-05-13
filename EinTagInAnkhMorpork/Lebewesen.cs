@@ -6,12 +6,21 @@ using System.Threading.Tasks;
 
 namespace EinTagInAnkhMorpork
 {
+	//Basisklasse für alle Lebewesen
 	internal abstract class Lebewesen
 	{
-		protected abstract void Lebensbalken();
-		protected abstract void Geschick();
-		protected abstract void Intelligenz();
-		protected abstract void Staerke();
+		public string Name { get; set; }
+
+
+
+		public Lebewesen(string name)
+		{
+			Name = name;
+
+		}
+
+
 
 	}
+
 }

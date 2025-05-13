@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\micha\\OneDrive\\Desktop\\LuGProbeProjekt\\StartProjekt\\EinTagInAnkhMorpork\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{19135460-1BF2-4169-B3F2-1AE295983326}|EinTagInAnkhMorpork.csproj|c:\\users\\micha\\onedrive\\desktop\\lugprobeprojekt\\startprojekt\\eintaginankhmorpork\\lebewesen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19135460-1BF2-4169-B3F2-1AE295983326}|EinTagInAnkhMorpork.csproj|solutionrelative:lebewesen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{19135460-1BF2-4169-B3F2-1AE295983326}|EinTagInAnkhMorpork.csproj|c:\\users\\micha\\onedrive\\desktop\\lugprobeprojekt\\startprojekt\\eintaginankhmorpork\\lebewesenmitlebenundschaden.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19135460-1BF2-4169-B3F2-1AE295983326}|EinTagInAnkhMorpork.csproj|solutionrelative:lebewesenmitlebenundschaden.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{19135460-1BF2-4169-B3F2-1AE295983326}|EinTagInAnkhMorpork.csproj|c:\\users\\micha\\onedrive\\desktop\\lugprobeprojekt\\startprojekt\\eintaginankhmorpork\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{19135460-1BF2-4169-B3F2-1AE295983326}|EinTagInAnkhMorpork.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19135460-1BF2-4169-B3F2-1AE295983326}|EinTagInAnkhMorpork.csproj|c:\\users\\micha\\onedrive\\desktop\\lugprobeprojekt\\startprojekt\\eintaginankhmorpork\\hauptcharakter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19135460-1BF2-4169-B3F2-1AE295983326}|EinTagInAnkhMorpork.csproj|solutionrelative:hauptcharakter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19135460-1BF2-4169-B3F2-1AE295983326}|EinTagInAnkhMorpork.csproj|c:\\users\\micha\\onedrive\\desktop\\lugprobeprojekt\\startprojekt\\eintaginankhmorpork\\haendler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19135460-1BF2-4169-B3F2-1AE295983326}|EinTagInAnkhMorpork.csproj|solutionrelative:haendler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19135460-1BF2-4169-B3F2-1AE295983326}|EinTagInAnkhMorpork.csproj|c:\\users\\micha\\onedrive\\desktop\\lugprobeprojekt\\startprojekt\\eintaginankhmorpork\\lebewesen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19135460-1BF2-4169-B3F2-1AE295983326}|EinTagInAnkhMorpork.csproj|solutionrelative:lebewesen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,19 +30,55 @@
       "DocumentGroups": [
         {
           "DockedHeight": 395,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "Hauptcharakter.cs",
+              "DocumentMoniker": "C:\\Users\\micha\\OneDrive\\Desktop\\LuGProbeProjekt\\StartProjekt\\EinTagInAnkhMorpork\\Hauptcharakter.cs",
+              "RelativeDocumentMoniker": "Hauptcharakter.cs",
+              "ToolTip": "C:\\Users\\micha\\OneDrive\\Desktop\\LuGProbeProjekt\\StartProjekt\\EinTagInAnkhMorpork\\Hauptcharakter.cs",
+              "RelativeToolTip": "Hauptcharakter.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T12:44:11.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Lebewesen.cs",
               "DocumentMoniker": "C:\\Users\\micha\\OneDrive\\Desktop\\LuGProbeProjekt\\StartProjekt\\EinTagInAnkhMorpork\\Lebewesen.cs",
               "RelativeDocumentMoniker": "Lebewesen.cs",
               "ToolTip": "C:\\Users\\micha\\OneDrive\\Desktop\\LuGProbeProjekt\\StartProjekt\\EinTagInAnkhMorpork\\Lebewesen.cs",
               "RelativeToolTip": "Lebewesen.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T14:18:52.101Z",
+              "WhenOpened": "2025-05-12T14:18:52.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Haendler.cs",
+              "DocumentMoniker": "C:\\Users\\micha\\OneDrive\\Desktop\\LuGProbeProjekt\\StartProjekt\\EinTagInAnkhMorpork\\Haendler.cs",
+              "RelativeDocumentMoniker": "Haendler.cs",
+              "ToolTip": "C:\\Users\\micha\\OneDrive\\Desktop\\LuGProbeProjekt\\StartProjekt\\EinTagInAnkhMorpork\\Haendler.cs",
+              "RelativeToolTip": "Haendler.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAkwBsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T12:41:54.616Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LebewesenMitLebenUndSchaden.cs",
+              "DocumentMoniker": "C:\\Users\\micha\\OneDrive\\Desktop\\LuGProbeProjekt\\StartProjekt\\EinTagInAnkhMorpork\\LebewesenMitLebenUndSchaden.cs",
+              "RelativeDocumentMoniker": "LebewesenMitLebenUndSchaden.cs",
+              "ToolTip": "C:\\Users\\micha\\OneDrive\\Desktop\\LuGProbeProjekt\\StartProjekt\\EinTagInAnkhMorpork\\LebewesenMitLebenUndSchaden.cs",
+              "RelativeToolTip": "LebewesenMitLebenUndSchaden.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAA4wB8AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T12:40:03.389Z",
               "EditorCaption": ""
             },
             {
@@ -41,7 +89,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\micha\\OneDrive\\Desktop\\LuGProbeProjekt\\StartProjekt\\EinTagInAnkhMorpork\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwAkAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-09T15:43:58.408Z",
               "EditorCaption": ""
