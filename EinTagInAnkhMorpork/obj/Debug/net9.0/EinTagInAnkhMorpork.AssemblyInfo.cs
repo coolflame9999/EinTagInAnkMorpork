@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EinTagInAnkhMorpork")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7578a119ea566a2818bf4d1fd82bc78349728f36")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28fa69dda758c0e59c161f26bf7b3ea8392f607a")]
 [assembly: System.Reflection.AssemblyProductAttribute("EinTagInAnkhMorpork")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EinTagInAnkhMorpork")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

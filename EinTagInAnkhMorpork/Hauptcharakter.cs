@@ -31,9 +31,9 @@ namespace EinTagInAnkhMorpork
 
 		public override string ToString()
 		{
-			return $"Name: {Name ?? "Nicht befüllt"}, Lebenspunkte: {Lebenspunkte?.ToString() ?? "Nicht.befüllt"}, Stärke: {Staerke?.ToString() ?? "Nicht befüllt"}, " +
-				   $"Geschick: {Geschick?.ToString() ?? "Nicht befüllt"}, Intelligenz: {Intelligenz?.ToString() ?? "Nicht befüllt"}, " +
-				   $"Inventar: {Inventar ?? "Nicht befüllt"}, Ausrüstungsslot 1: {AusruestungsslotEins ?? "Nicht befüllt"}, Ausrüsturngsslot 2: {AusruestungsslotZwei ?? "Nicht befüllt"}";
+			return $" Name:\t\t{Name ?? "Nicht befüllt"}\n Lebenspunkte:\t{Lebenspunkte.ToString() ?? "Nicht.befüllt"}\n Stärke:\t{Staerke.ToString() ?? "Nicht befüllt"}\n " +
+				   $"Geschick:\t{Geschick.ToString() ?? "Nicht befüllt"}\n Intelligenz:\t{Intelligenz.ToString() ?? "Nicht befüllt"}\n " +
+				   $"\n Inventar:\t\t{Inventar ?? "Nicht befüllt"}\n Ausrüstungsslot 1:\t{AusruestungsslotEins ?? "Nicht befüllt"}\n Ausrüstungsslot 2:\t{AusruestungsslotZwei ?? "Nicht befüllt"}";
 		}
 	}
 }

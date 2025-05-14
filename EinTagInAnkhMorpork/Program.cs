@@ -3,7 +3,20 @@
     internal class Program
     {
 		static void Main(string[] args)
-		{
+		{	// 	Konfiguriert die Console auf UTF-8 für die Korrekte Darstellung von Unicode-Zeichen. 
+			Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+			try
+			{
+				Textausgabe fenster = new Textausgabe("C:/Users/micha/OneDrive/Desktop/LuGProbeProjekt/StartProjekt/EinTagInAnkhMorpork/Content/ContentFenster.txt");
+				fenster.ScheibTextWieSchreibmaschine(50);
+			}
+			catch (FileNotFoundException ex)
+			{
+				Console.WriteLine(ex.Message);
+			}
+			
+			
 
 			SpielStarten();
 			Console.ReadKey();
@@ -61,15 +74,21 @@
 			switch (auswahlSpieler)
 			{
 				case "k":
-					Hauptcharakter karotte = new("Karotte Eisengießerson", 100, 100, 80, 80, null, null, null, null);
+					Hauptcharakter karotte = new("Karotte Eisengieserson", 100, 90, 80, 90, null, null, null, null);
+					Console.WriteLine($"\t{karotte.Lebensanzeige.HerzenErstellen()}");
+					Console.WriteLine();
 					Console.WriteLine(karotte);
 					break;
 				case "m":
 					Hauptcharakter mumm = new("Samuel Mumm", 90, 80, 70, 80, null, null, null, null);
+					Console.WriteLine($"\t{mumm.Lebensanzeige.HerzenErstellen()}");
+					Console.WriteLine();
 					Console.WriteLine(mumm);
 					break;
 				case "n":
-					Hauptcharakter nobby = new("Nobby Nobbs", 70, 40, 90, 60, null, null, null, null);
+					Hauptcharakter nobby = new("Nobby Nobbs", 20, 40, 90, 60, null, null, null, null);
+					Console.WriteLine($"\t{nobby.Lebensanzeige.HerzenErstellen()}");
+					Console.WriteLine();
 					Console.WriteLine(nobby);
 					break;
 				default:

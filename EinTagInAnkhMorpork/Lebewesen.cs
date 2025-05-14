@@ -9,7 +9,7 @@ namespace EinTagInAnkhMorpork
 	//Basisklasse für alle Lebewesen
 	internal abstract class Lebewesen
 	{
-		public string Name { get; set; }
+		public string Name { get; }
 
 
 
