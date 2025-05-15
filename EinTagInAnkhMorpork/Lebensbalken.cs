@@ -48,8 +48,13 @@ namespace EinTagInAnkhMorpork
 
 			int leereHerzen = maximaleHerzen - gefuellteHerzen;
 
-			string volleHerzen = new string('\u2665', gefuellteHerzen);
+			string volleHerzen =new string('\u2665', gefuellteHerzen);
 			string leereHerzenStr = new string('\u2661', leereHerzen);
+
+			int startX = Console.WindowWidth - (volleHerzen.Length + leereHerzenStr.Length) - 10;
+
+			Console.SetCursorPosition(startX, Console.CursorTop);
+
 			return volleHerzen + leereHerzenStr;
 
 		}

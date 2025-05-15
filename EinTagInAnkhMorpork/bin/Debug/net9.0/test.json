@@ -1,0 +1,14 @@
+[
+  {
+    "Name": "Schwert",
+    "Preis": 50
+  },
+  {
+    "Name": "Handschuhe",
+    "Preis": 60
+  },
+  {
+    "Name": "Helm",
+    "Preis": 80
+  }
+]

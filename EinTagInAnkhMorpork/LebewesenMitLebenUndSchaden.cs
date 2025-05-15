@@ -9,7 +9,7 @@ namespace EinTagInAnkhMorpork
 	// Abstracte Klasse, die Eigenschaften und Lebenspunkte haben, sowie Schaden verursachen und erhalten können
 	internal abstract class LebewesenMitLebenUndSchaden : Lebewesen
 	{
-
+			
 		public int Lebenspunkte { get; set; }
 
 		public int Staerke { get; set; }
@@ -17,10 +17,13 @@ namespace EinTagInAnkhMorpork
 		public int Geschick { get; set; }
 		public int Intelligenz { get; set; }
 
+		public int? Schaden {  get; set; }
+
 		public Lebensbalken Lebensanzeige { get; private set; }
 
-		public LebewesenMitLebenUndSchaden(string name, int lebenspunkte, int staerke, int geschick, int intelligenz) : base(name)
+		public LebewesenMitLebenUndSchaden(string name, int lebenspunkte, int staerke, int geschick, int intelligenz, int? schaden) : base(name)
 		{
+			Schaden = schaden;
 			Lebenspunkte = lebenspunkte;
 			Staerke = staerke;
 			Geschick = geschick;
@@ -33,11 +36,9 @@ namespace EinTagInAnkhMorpork
 
 		
 
-		public abstract void VerursacheSchaden();
-		public void SchadenErhalten(int schaden)
-		{
-			Lebenspunkte -= schaden;
-		}
+		public abstract void Angreifen();
+		public abstract bool SchadenErhalten();
+		
 
 		
 

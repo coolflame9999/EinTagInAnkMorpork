@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json;
 
 namespace EinTagInAnkhMorpork
 {
@@ -11,37 +12,87 @@ namespace EinTagInAnkhMorpork
 	{
 
 		// Die mit ? markierten Eigenschaften können den Wert null annehmen.
-		public string? ItemEins { get; set; }
-		public string? ItemZwei { get; set; }
-		public string? ItemDrei { get; set; }
 
-		public int? Gold { get; set; }
+		public int? Gold { get; private set; }
 
-		public Haendler(string name, string itemEins, string itemZwei, string itemDrei, int gold) : base(name)
+		private List<Item> _inventar;
+
+		public Haendler(string name, int startgold) : base(name)
 		{
-			ItemEins = itemEins;
-			ItemZwei = itemZwei;
-			ItemDrei = itemDrei;
-			Gold = gold;
+
+			Gold = startgold;
+			_inventar = new List<Item>();
 		}
 
-		public void Verkaufen()
+		
+
+
+		public void LadeInventarAusJson(string filePath)
 		{
-			Console.WriteLine("Verkauft");
+			if (!File.Exists(filePath))
+				throw new FileNotFoundException("Inventar-JSON-Datei nicht gefunden", filePath);
+
+			string jsonInhalt  = File.ReadAllText(filePath);
+
+			List<Item> items = JsonSerializer.Deserialize<List<Item>>(jsonInhalt);
+
+			if (items == null)
+				throw new Exception("Deserialisierung schlug fehl.");
+
+			 _inventar.AddRange(items);
+
+		}
+		public void ItemHinzufuegen(Item item)
+		{
+			_inventar.Add(item);
 		}
 
-		public void Kaufen()
+		public bool ItemEntfernen(Item item)
 		{
-			Console.WriteLine("Gekauft");
+			return _inventar.Remove(item);
 		}
 
-		// Null Handling mit dem ?? wird geprüft, ob die Eigenschaft befüllt ist, wenn nicht steht rechts ein Platzhaltertext.
-		// Bei zahl-Datentypen müssen diese zuvor mit <EIGENSCHAFTSBEZEICHNER>?.ToString() Methode umgewandelt werden.
+
+		public string ZeigeInventar()
+		{
+			if (_inventar.Count == 0)
+				return "Kein Item vorhanden";
+
+			StringBuilder itemSb = new StringBuilder();
+			for (int i = 0; i < _inventar.Count; i++)
+			{
+				itemSb.Append(_inventar[i].ToString());
+				if (i < _inventar.Count - 1)
+					itemSb.Append(", ");
+			}
+			return itemSb.ToString();
+
+
+
+		}
+		public void GoldHinzufuegen(int menge)
+		{
+			if (menge < 0)
+				throw new ArgumentException("Betrag muss positiv sein.", nameof(menge));
+
+		}
+
+		public bool GoldAusgeben(int menge)
+		{
+			if (menge < 0)
+				throw new ArgumentException("Betrag muss positiv sein", nameof(menge));
+			if (Gold >= menge)
+			{
+				Gold -= menge;
+				return true;
+			}
+			return false;
+		}
 		public override string ToString()
 		{
-			return $"Name: {Name ?? "Nicht befüllt"}, Item 1: {ItemEins ?? "Nicht.befüllt"}, Item 2: {ItemZwei ?? "Nicht befüllt"}, " +
-				   $"Item 3: {ItemDrei ?? "Nicht befüllt"}, Gold: {Gold?.ToString() ?? "Nicht befüllt"}";
+			return $"Händler: {Name}\n" +
+				   $"Gold: {Gold}\n" +
+				   $"Inventar: {ZeigeInventar()}";
 		}
 	}
-
 }
