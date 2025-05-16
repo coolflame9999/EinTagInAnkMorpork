@@ -7,7 +7,7 @@ using System.Text.Json;
 
 namespace EinTagInAnkhMorpork
 {
-	// Händlerklasse
+	// Händlerklasse abgeleitet aus Lebewesen, Schaden und Lebenspunkte für Händler sind nicht vorgesehen.
 	internal class Haendler : Lebewesen
 	{
 
@@ -26,7 +26,7 @@ namespace EinTagInAnkhMorpork
 
 		
 
-
+		 // Logic für das aus lesen einer beliebigen Inventar-Json-Datei
 		public void LadeInventarAusJson(string filePath)
 		{
 			if (!File.Exists(filePath))
@@ -34,7 +34,7 @@ namespace EinTagInAnkhMorpork
 
 			string jsonInhalt  = File.ReadAllText(filePath);
 
-			List<Item> items = JsonSerializer.Deserialize<List<Item>>(jsonInhalt);
+			List<Item>? items = JsonSerializer.Deserialize<List<Item>>(jsonInhalt);
 
 			if (items == null)
 				throw new Exception("Deserialisierung schlug fehl.");
@@ -42,6 +42,8 @@ namespace EinTagInAnkhMorpork
 			 _inventar.AddRange(items);
 
 		}
+
+		// Hinzfügen und Entfernen vonn Items
 		public void ItemHinzufuegen(Item item)
 		{
 			_inventar.Add(item);
@@ -52,7 +54,7 @@ namespace EinTagInAnkhMorpork
 			return _inventar.Remove(item);
 		}
 
-
+		 // Aufruf des Inventars
 		public string ZeigeInventar()
 		{
 			if (_inventar.Count == 0)
@@ -67,9 +69,8 @@ namespace EinTagInAnkhMorpork
 			}
 			return itemSb.ToString();
 
-
-
 		}
+		// Gold geben und nehmen
 		public void GoldHinzufuegen(int menge)
 		{
 			if (menge < 0)
@@ -88,6 +89,8 @@ namespace EinTagInAnkhMorpork
 			}
 			return false;
 		}
+
+		// Ausgabe der Parameter in Konsole
 		public override string ToString()
 		{
 			return $"Händler: {Name}\n" +

@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace EinTagInAnkhMorpork
 {
+// Klasse Lebensbalken
+// Zeichnet eingegebene Lebenspunkte als Hersen in die Konsole.
 	internal class Lebensbalken
 	{
 		

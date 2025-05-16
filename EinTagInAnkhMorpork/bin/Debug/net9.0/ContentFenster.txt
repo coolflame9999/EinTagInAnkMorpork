@@ -1,0 +1,53 @@
+INTRO
+
+"Es war einmal eine Schildkröte..."
+
+INTRO ENDE
+
+ALLE WACHRAUM
+Hauptmann KAROTTE EISENGIESERSON, Kommandeur MUMM und NOBBY NOBB NOBBS
+
+ALLE WACHRAUM ENDE
+
+KAROTTE WACHRAUM
+Hauptmann KAROTTE verlies das Wachhaus in der Sirupminenstraße in Richtung Zwergenkneipe... 
+
+KAROTTE WACHRAUM ENDE
+
+ 
+KAROTTE ZWERGENKNEIPE BETRETEN
+Hauptmann Karotte trifft in der Zwergenkneipe ein.
+KAROTTE ZWERGENKNEIPE BETRETEN ENDE
+
+KAROTTE ZWERGENKNEIPE VERLASSEN
+Hauptmann Karotte verlässt die Zwergenkneipe und macht sich auf den Weg zum Hier-gibts-alles-Platz
+KAROTTE ZWERGENKNEIPE VERLASSEN ENDE
+
+KAROTTE HIERGIBTSALLESPLATZ BETRETEN
+Sieht am Rand des Platzes TMSIDR Schnapper
+KAROTTE HIERGIBTSALLESPLATZ BETRETEN ENDE
+
+
+KAROTTE HIERGIBTSALLESPLATZ NACH HANDEL
+Karotte zieht das verschlissene Tuch vom Schwert
+KAROTTE HIERGIBTSALLESPLATZ NACH HANDEL ENDE
+
+
+KAROTTE KAMPFPLATZ BETRETEN DRACHE
+Der Drache gewinnt zusehends an Substanz
+KAROTTE KAMPFLATZ BETRETEN DRACHE ENDE
+
+
+KAROTTE VERLIERT KAMPF
+Karotte ist verschwunden, lediglich sein Schatten ist an der gegenüberliegenden Ziegelmauer eingebrannt
+KAROTTE VERLIERT KAMPF ENDE
+
+
+KAROTTE GEWINNT KAMPF
+Karotte steht über den sich auflösenden Körper des Drachen
+KAROTTE GEWINNT KAMPF ENDE
+
+
+ALLE VERSAMMELT
+Trinken alle Kaffee und beginnen die Nachtschicht
+ALLE VERSAMMELT ENDE 

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace EinTagInAnkhMorpork
 {
+	// Item-Klasse Preis und Bezeichnung
 	public class Item
 	{
 		public string Name { get; set; }

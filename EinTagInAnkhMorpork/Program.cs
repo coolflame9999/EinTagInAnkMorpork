@@ -3,74 +3,16 @@ using System.Data;
 using System.Text.Json;
 namespace EinTagInAnkhMorpork
 {
-    internal class Program
-    {
+	internal class Program
+	{
 		static void Main(string[] args)
 		{   // 	Konfiguriert die Console auf UTF-8 für die Korrekte Darstellung von Unicode-Zeichen. 
 			Console.OutputEncoding = System.Text.Encoding.UTF8;
 
 			SpielStarten();
+			Handeln();
+		
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-			/*List<Item> inventar = new List<Item>()
-			{
-				new Item()  { Name = "Schwert", Preis = 50},
-				new Item()  { Name = "Handschuhe", Preis = 60},
-				new Item()  { Name = "Helm", Preis = 80},
-
-			};
-
-			JsonSerializerOptions options = new JsonSerializerOptions
-			{
-				WriteIndented = true
-			};
-			string jsonContent = JsonSerializer.Serialize(inventar, options);
-			string filePath = @"C:\Users\micha\OneDrive\Desktop\LuGProbeProjekt\StartProjekt\EinTagInAnkhMorpork\bin\Debug\net9.0\inventar.json";
-
-			File.WriteAllText(filePath, jsonContent);
-
-			Console.WriteLine("JSON Datei wurde erfolgreich erstellt: " + filePath); ;
-*/
-			Haendler tmsidr = new("TMSIDR Schnapper", 100);
-			Hauptcharakter karotte = new("Karotte", 100, 80, 40, 80, null, null, 50, "leer", "leer");
-
-			
-
-			Console.WriteLine("\nHändler-Daten:");
-			Console.WriteLine(tmsidr.ToString());
-
-
-			/*try
-			{
-				Textausgabe fenster = new Textausgabe("C:/Users/micha/OneDrive/Desktop/LuGProbeProjekt/StartProjekt/EinTagInAnkhMorpork/Content/ContentFenster.txt");
-				string startMarker = "NOBBY";
-				string endMarker = "NOBBY ENDE";
-				fenster.FindeTextAbschnitt(startMarker, endMarker, false, 50);
-
-
-
-			}
-			catch (FileNotFoundException ex)
-			{
-				Console.WriteLine(ex.Message);
-			}
-*/
-
-
-			SpielStarten();
 			Console.ReadKey();
 		}
 		// Methode zum Spielstart
@@ -83,6 +25,7 @@ namespace EinTagInAnkhMorpork
 			{
 				// ´Möchte man spielen? Noch offen ob sinnvoll
 				Console.WriteLine("Möchten Sie spielen?");
+				Console.WriteLine("ja / nein");
 				string? antwort = Console.ReadLine();
 
 				Console.Clear();
@@ -91,8 +34,10 @@ namespace EinTagInAnkhMorpork
 				if (antwort == "ja")
 				{
 					Console.WriteLine("Möchten sie einen Spielstand laden oder ein neues Spiel starten?");
+					Console.WriteLine("neu / laden");
 					string? neuesSpiel = Console.ReadLine();
 
+					
 					switch (neuesSpiel)
 					{
 						case "laden":
@@ -100,7 +45,7 @@ namespace EinTagInAnkhMorpork
 							Console.ReadKey();
 							break;
 						case "neu":
-							Intro();
+							TextAusgeben("INTRO", "INTRO ENDE");
 							Console.WriteLine("Neues Spiel wird erstellt");
 							Console.ReadKey();
 							CharakterAuswahl();
@@ -110,92 +55,98 @@ namespace EinTagInAnkhMorpork
 					}
 				}
 				else
-				{
+				{	// Beendet Spiel
+					Console.WriteLine("Spiel wird beendet.");
 					Environment.Exit(0);
 				}
 
-
 			}
 		}
-
+		 // Erstellt Händler-Objekt und lädt Inventar aus Json-Datei
+		public static void Handeln()
+		{
+			Haendler tmsidr = new("TMSIDR Schnapper", 100);
+			Console.WriteLine(tmsidr.ToString());
+			Console.WriteLine("\nHändler-Daten:");
+		}
+		// Auswahl des Charakters
 		public static void CharakterAuswahl()
 		{
-			Console.WriteLine("Wähle einen Charakter: (K)arotte, (M)umm oder (N)obby");
+			// Zwischenausgabe
+			TextAusgeben("ALLE WACHRAUM", "ALLE WACHRAUM ENDE");
 
+			Console.WriteLine("Wähle einen Charakter: (k)arotte, (m)umm oder (n)obby");
+
+			// Auswahl des Charakters
 			string? auswahlSpieler = Console.ReadLine();
 
 			switch (auswahlSpieler)
-			{
+			{	
 				case "k":
-					PfadKarotteVerlaesstStation();
+					// Beginn mit der Figur
+					TextAusgeben("KAROTTE WACHRAUM", "KAROTTE WACHRAUM ENDE");
 					LadenDesCharakterPfads();
-					
+
 					break;
 				case "m":
-					Hauptcharakter mumm = new("Sam", 90, 80, 70, 80, null, null, null, "leer", "leer");
+
+					Console.WriteLine("Nicht freigeschaltet");
+					CharakterAuswahl();
+					/*Hauptcharakter mumm = new("Sam", 90, 80, 70, 80, 10, null, null, "leer", "leer");
 					Console.WriteLine($"\t{mumm.Lebensanzeige.HerzenErstellen()}");
 					Console.WriteLine();
-					Console.WriteLine(mumm);
+					Console.WriteLine(mumm);*/
 					break;
 				case "n":
-					Hauptcharakter nobby = new("Nobby", 20, 40, 90, 60, null, null, null, "leer", "leer");
+
+					Console.WriteLine("Nicht freigeschaltet");
+					CharakterAuswahl();
+					/*Hauptcharakter nobby = new("Nobby", 20, 40, 90, 60, 10, null, null, "leer", "leer");
 					Console.WriteLine($"\t{nobby.Lebensanzeige.HerzenErstellen()}");
 					Console.WriteLine();
-					Console.WriteLine(nobby);
+					Console.WriteLine(nobby);*/
 					break;
 				default:
 					break;
 			}
-		} 
-		public static void Intro()
-		{
-			try
-			{
-				Textausgabe fenster = new Textausgabe("C:/Users/micha/OneDrive/Desktop/LuGProbeProjekt/StartProjekt/EinTagInAnkhMorpork/Content/ContentFenster.txt");
-				string startMarker = "INTRO";
-				string endMarker = "INTRO ENDE";
-				fenster.FindeTextAbschnitt(startMarker, endMarker, false, 50);
-
-
-
-			}
-			catch (FileNotFoundException ex)
-			{
-				Console.WriteLine(ex.Message);
-			}
 		}
-
-		public static void PfadKarotteVerlaesstStation()
+		 // Textausgabe Methode Lädt Text aus Dokument und gibt den Text zwischen den Markern aus.
+		public static void TextAusgeben(string startMarker, string endMarker)
 		{
 			try
 			{
-				Textausgabe fenster = new Textausgabe("C:/Users/micha/OneDrive/Desktop/LuGProbeProjekt/StartProjekt/EinTagInAnkhMorpork/Content/ContentFenster.txt");
-				string startMarker = "KAROTTE";
-				string endMarker = "KAROTTE ENDE";
+
+				Textausgabe fenster = new Textausgabe("./ContentFenster.txt");
+
+				// Formatierte Ausgabe des Dokuments in TypeWriter Stil.
 				fenster.FindeTextAbschnitt(startMarker, endMarker, false, 80);
-
-
-
 			}
 			catch (FileNotFoundException ex)
 			{
 				Console.WriteLine(ex.Message);
 			}
 		}
+		// Lädt die benötigten Objekte und Ausgabe der in den Parametern festgelegten Werte.
 		public static void LadenDesCharakterPfads()
 		{
 			Console.WriteLine();
 			Console.WriteLine();
 			Console.WriteLine();
-			Hauptcharakter karotte = new("Karotte", 100, 90, 80, 90, null, null, 100, "leer", "leer");
+
+			// Erstellen der benötigten Objekte
+			Hauptcharakter karotte = new("Karotte", 100, 90, 80, 90, 10, null, 100, "leer", "leer");
 			Haendler tmsidr = new("Treib-mich-selbst-in-den-Ruin Schnapper", 100);
+			Gegner ursula = new("Ursula", 150, 130, 80, 70, 13, null);
+
+			Console.WriteLine($"\t{ursula.Lebensanzeige.HerzenErstellen()}");
+			Console.WriteLine(ursula);
 			Console.WriteLine($"\t{karotte.Lebensanzeige.HerzenErstellen()}");
 			Console.WriteLine(karotte);
 			Console.WriteLine();
 			Console.WriteLine(tmsidr);
 			try
-			{
-				tmsidr.LadeInventarAusJson(@"C:\Users\micha\OneDrive\Desktop\LuGProbeProjekt\StartProjekt\EinTagInAnkhMorpork\bin\Debug\net9.0\inventar.json");
+			{	 // Laden des Inventars aus der JSon Datei
+				tmsidr.LadeInventarAusJson("./inventar.json");
 
 			}
 			catch (Exception ex)

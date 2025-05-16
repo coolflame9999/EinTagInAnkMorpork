@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace EinTagInAnkhMorpork
 {
+	// Textausgabe Klasse
 	internal class Textausgabe
 	{
 		// Nur Lesezugriff: Der geladene Text
@@ -111,7 +112,7 @@ namespace EinTagInAnkhMorpork
 		// dass die maximale Breite (maxBreite) nicht überschritten wird.
 		private string Zeilenumbruch(string text, int maxBreite)
 		{
-			// Aufteilen in Absätze (bereits vorhandene Zeilenumbrüche werden respektiert)
+			// Aufteilen in Absätze (bereits vorhandene Zeilenumbrüche werden beachtet)
 			string[] absaetze = text.Split(new[] { "\r\n", "\n" }, StringSplitOptions.None);
 			StringBuilder ergebnis = new StringBuilder();
 

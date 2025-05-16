@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 namespace EinTagInAnkhMorpork
 {
 
-	// Hauptcharakter Klasse
+	// Hauptcharakter Klasse Ableitung aus LebewesenMitLebenUndSchaden.
+		// Hat Leben und kann Schaden austeilen und erhalten, kann Items ausrüsten und hat Inventar
 	internal class Hauptcharakter : LebewesenMitLebenUndSchaden
 	{
 
@@ -19,9 +20,8 @@ namespace EinTagInAnkhMorpork
 
 		private List<Item> _inventar;
 
-		
 
-		public Hauptcharakter(string name, int lebenspunkte, int staerke, int geschick, int intelligenz, int? schaden, int? anzahl, int? gold, string ausruestungsslotEins, string ausruestungsslotZwei) : base(name, lebenspunkte, staerke, geschick, intelligenz, schaden)
+		public Hauptcharakter(string name, int lebenspunkte, int staerke, int geschick, int intelligenz, int schaden, int? anzahl, int? gold, string ausruestungsslotEins, string ausruestungsslotZwei) : base(name, lebenspunkte, staerke, geschick, intelligenz, schaden)
 		{
 
 			Anzahl = anzahl;
@@ -30,6 +30,8 @@ namespace EinTagInAnkhMorpork
 			AusruestungsslotZwei = ausruestungsslotZwei;
 			_inventar = new List<Item>();
 		}
+
+		// Item nehmen und entfernen von Items und Anzeige des Inventars
 		public void ItemHinzufuegen(Item item)
 		{
 			_inventar.Add(item);
@@ -39,6 +41,8 @@ namespace EinTagInAnkhMorpork
 		{
 			return _inventar.Remove(item);
 		}
+
+		// Sammelt alle Einträge aus der Liste _inventar erstellt daraus Zeichenketten und gibt dies am Ende als einen String aus
 		public string InventarAnzeigen()
 		{
 			if (_inventar.Count == 0)
@@ -57,6 +61,7 @@ namespace EinTagInAnkhMorpork
 			return itemSb.ToString();
 		}
 
+		// Gold hinzufügen und entfernen
 		public void GoldHinzufuegen(int menge)
 		{
 			if (menge < 0)
@@ -76,15 +81,31 @@ namespace EinTagInAnkhMorpork
 			return false;
 		}
 
-		public override void Angreifen()
+		// Schaden austeilen und erhalten.
+		public void Angreifen(Gegner ziel)
 		{
-
-		}
-		public override bool SchadenErhalten()
-		{
-			throw new NotImplementedException();
+			Console.WriteLine($"{Name} greift {ziel.Name} an und verursacht {Schaden} Schaden!");
+			ziel.ErhalteSchaden(Schaden);
 		}
 
+		public override void ErhalteSchaden(int schaden)
+		{
+			// Schadenswert von den Lebenspunkten abziehen
+			Lebenspunkte -= schaden;
+
+			// Sicherstellen, dass die Lebenspunkte nicht unter 0 fallen
+			if (Lebenspunkte < 0)
+				Lebenspunkte = 0;
+
+			Console.WriteLine($"{Name} erleidet {schaden} Schaden und hat nun {Lebenspunkte} Lebenspunkte.");
+
+			// Falls die Lebenspunkte 0 oder weniger erreichen, wurde der Charakter besiegt
+			if (Lebenspunkte <= 0)
+			{
+				Console.WriteLine($"{Name} wurde besiegt!");
+			}
+		}
+		 // Formatierte Ausgabe der Parameter in der Konsole.
 		public override string ToString()
 		{
 			int breiteTotal = Console.WindowWidth;
